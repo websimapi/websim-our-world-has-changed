@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Our World Has Changed</title>
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Caladea&family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css">
+  <!-- Minimal import map (no external JS libs required for this build) -->
+  <script type="importmap">
+  {
+    "imports": {}
+  }
+  </script>
+</head>
+<body>
+  <main class="layout" id="app">
+    <header class="site-header" role="banner">
+      <h1 class="title">Our World Has Changed</h1>
+      <p class="subtitle" id="subtitle" aria-live="polite">A quiet ripple becomes motion.</p>
+    </header>
+
+    <section class="hero" aria-hidden="false">
+      <div class="hero-inner">
+        <canvas id="bgCanvas" class="bg-canvas" aria-hidden="true"></canvas>
+        <div class="hero-content">
+          <p class="lead">Shift the sliders. See the system adapt.</p>
+
+          <div class="controls" aria-label="Simulation controls">
+            <label>
+              Density
+              <input id="density" type="range" min="10" max="300" value="80">
+            </label>
+            <label>
+              Speed
+              <input id="speed" type="range" min="0" max="2" step="0.01" value="0.6">
+            </label>
+            <label>
+              Chaos
+              <input id="chaos" type="range" min="0" max="1" step="0.01" value="0.18">
+            </label>
+          </div>
+
+          <div class="cta-row">
+            <button id="resetBtn" class="btn">Reset</button>
+            <button id="snapshotBtn" class="btn quiet">Snapshot</button>
+            <span class="info" id="particlesInfo">Particles: —</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="notes" aria-labelledby="notes-heading">
+      <h2 id="notes-heading">What changed?</h2>
+      <p>Interact with the sliders to explore emergent behavior. Subtle rules create surprising global patterns.</p>
+      <ul>
+        <li>Density: how many agents are simulated</li>
+        <li>Speed: global motion multiplier</li>
+        <li>Chaos: randomness injected into behavior</li>
+      </ul>
+    </section>
+
+    <footer class="site-footer" role="contentinfo">
+      <small>Built for exploration • Accessible, minimal UI</small>
+    </footer>
+  </main>
+
+  <script type="module" src="script.js"></script>
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/v8c78df7c7c0f484497ecbca7046644da1771523124516" integrity="sha512-8DS7rgIrAmghBFwoOTujcf6D9rXvH8xm8JQ1Ja01h9QX8EzXldiszufYa4IFfKdLUKTTrnSFXLDkUEOTrZQ8Qg==" data-cf-beacon='{"version":"2024.11.0","token":"4c6229722a6346bc8eb5cb0e5eae5d41","server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>
+
